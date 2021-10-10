@@ -6,12 +6,15 @@ USRP 장치에서 샘플을 스트리밍하는 데 사용(수신기 역할)</br>
 
 <h3>Sync</h3>
 USRP가 PC의 클럭 또는 PPS 신호가 존재하는 경우 동기화를 시도하도록 하기 위해 사용될 수 있음</br>
+clock: 동작하는(행동하는) 순간(타이밍,Timing)을 제어하기 위한 시간 정보</br>
+초당 패킷 전송률 pps (Packet Per Second)</br>
 
 <h3>Samp rate (Sps)</h3>
 초당 샘플 수</br>
 
 <h3>Ch0: Center Freq (Hz)</h3>
 RF 체인의 전체 주파수</br>
+RF 체인은 증폭기, 필터, 믹서, 감쇠기 및 검출기를 포함할 수 있는 일련의 전자 구성 요소 및 하위 장치</br>
 uhd.tune_request(freq, rf_freq = freq - lo_offest, rf_freq_policy=uhd.tune_request.POLICY_MANUAL)</br>
 RF 체인에 튜닝 방법을 구현에 지시, IF와 DSP 튜닝에 대한 자동 튜닝 또는 미세한 제어를 선택하는 데 사용</br>
 
@@ -53,7 +56,7 @@ window_size + 16으로 설정</br>
 </br>
 
 <h2>Complex Conjugate</h2>
-출력은 입력의 복잡한 결합</br>
+출력은 입력의 켤레 복소수</br>
 </br>
 
 <h2>Multiply</h2>
@@ -61,7 +64,7 @@ window_size + 16으로 설정</br>
 </br>
 
 <h2>Complex to Mag</h2>
-복합 sample의 크기를 계산, 벡터에서도 작동</br>
+complex samples의 크기를 계산, 벡터에서도 작동</br>
 </br>
 
 <h2>Divide</h2>
